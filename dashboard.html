@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NebulaCloud Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🌌 NebulaCloud Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div class="container">
+
+    <div class="card gradient1">
+        <h3>Create Virtual Machine</h3>
+
+        <input type="text" id="vmName" placeholder="VM Name">
+
+        <select id="cpu">
+            <option value="1">1 Core</option>
+            <option value="2">2 Cores</option>
+            <option value="4">4 Cores</option>
+            <option value="8">8 Cores</option>
+        </select>
+
+        <select id="ram">
+            <option value="2">2 GB</option>
+            <option value="4">4 GB</option>
+            <option value="8">8 GB</option>
+            <option value="16">16 GB</option>
+        </select>
+
+        <select id="os">
+            <option>Ubuntu</option>
+            <option>Windows</option>
+            <option>CentOS</option>
+        </select>
+
+        <button onclick="createVM()">Create VM</button>
+    </div>
+
+    <div class="card gradient2">
+        <h3>Allocate Storage</h3>
+
+        <input type="number" id="storageSize" placeholder="Storage in GB">
+        <button onclick="allocateStorage()">Allocate</button>
+    </div>
+
+</div>
+
+<div class="card full-width">
+    <h3>Virtual Machines</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>CPU</th>
+                <th>RAM</th>
+                <th>OS</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="vmTable"></tbody>
+    </table>
+</div>
+
+<div class="card full-width billing-card">
+    <h3>Billing Summary</h3>
+    <p id="billingDetails"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

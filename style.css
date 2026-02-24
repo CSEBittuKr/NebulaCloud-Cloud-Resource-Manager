@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #1cc88a, #4e73df);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+
+.main-header {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.main-header h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Glass Card */
+
+.glass-card {
+    width: 420px;
+    padding: 45px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    color: white;
+    transition: 0.3s;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-name {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.glass-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+}
+
+.glass-card button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.glass-card button:first-of-type {
+    background: white;
+    color: #333;
+}
+
+.glass-card button:first-of-type:hover {
+    transform: scale(1.05);
+}
+
+.secondary-btn {
+    background: #1cc88a !important;
+    color: white !important;
+}
+
+.secondary-btn:hover {
+    background: #17a673 !important;
+    transform: scale(1.05);
+}
+
+#error {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* Footer */
+
+.main-footer {
+    width: 100%;
+    padding: 60px 40px;
+    background: #0f172a;
+    color: #4a4f53;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 26px;
+    color: #cbd5e1;
+}
+
+.footer-content p:last-child {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #94a3b8;
+}
+/* ================= DASHBOARD ================= */
+
+body:not(.login-body) {
+    background: #f4f7fb;
+}
+
+/* Navbar */
+
+.navbar {
+    background: linear-gradient(90deg, #4e73df, #1cc88a);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar button {
+    background: crimson;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Top Cards */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 25px;
+    color: #2a5298;
+}
+
+.card input,
+.card select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.card button {
+    padding: 14px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+}
+
+/* VM Table */
+
+.full-width {
+    width: 85%;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.full-width h3 {
+    margin-bottom: 25px;
+    color: #2a5298;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(90deg, #667eea, #1cc88a);
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) td {
+    background: #f5f8ff;
+}
+
+tr:hover td {
+    background: #eaf1ff;
+}
+
+/* Billing */
+
+.billing-card {
+    width: 85%;
+    margin: 40px auto 60px auto;
+    padding: 40px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f6c23e, #e74a3b);
+    color: white;
+}
