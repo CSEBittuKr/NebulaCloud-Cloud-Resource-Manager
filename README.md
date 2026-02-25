@@ -2,7 +2,7 @@
 ### Cloud Resource Management Simulation Platform  
 Developed by **Khekhu Tech Innovators**
 
-http://khekhutech-cloud.s3-website-us-east-1.amazonaws.com
+https://khekhutech-cloud.netlify.app/
 ---
 
 ## 📌 Project Overview
